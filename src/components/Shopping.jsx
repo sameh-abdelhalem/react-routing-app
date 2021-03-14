@@ -54,12 +54,6 @@ const Shopping = () => {
                             >
                               View
                             </button>
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              Add to cart
-                            </button>
                           </div>
                           <small className="text-muted">9 mins</small>
                         </div>
