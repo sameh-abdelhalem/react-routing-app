@@ -24,15 +24,15 @@ const Shopping = () => {
 
   return (
     <>
-      <div className="album py-5 bg-dark">
+      <div className="album py-5 bg-light">
         <div className="container">
           <div className="row">
             {products.length ? (
               products.map((prod) => {
                 return (
-                  <div className="col-md-4">
+                  <div className="col-md-4" key={prod.id}>
                     <div className="card mb-4 shadow-sm">
-                      <Link href="">
+                      <Link to={`/product/${prod.id}`}>
                         <img
                           className="bd-placeholder-img card-img-top"
                           width="100%"
@@ -48,12 +48,14 @@ const Shopping = () => {
                         <p className="card-text"> {prod.price} $</p>
                         <div className="d-flex justify-content-between align-items-center">
                           <div className="btn-group">
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-secondary"
-                            >
-                              View
-                            </button>
+                            <Link to={`/product/${prod.id}`}>
+                              <button
+                                type="button"
+                                className="btn btn-sm btn-outline-secondary"
+                              >
+                                View
+                              </button>
+                            </Link>
                           </div>
                           <small className="text-muted">9 mins</small>
                         </div>
