@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Spinner } from "react-bootstrap";
 
@@ -10,7 +9,8 @@ const Product = ({ match }) => {
   // effect
   useEffect(() => {
     fetchProduct();
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   // methods
   const fetchProduct = async () => {
     await fetch(`https://fakestoreapi.com/products/${match.params.id}`)
