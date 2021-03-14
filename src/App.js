@@ -5,6 +5,7 @@ import Shopping from "./components/Shopping";
 import Home from "./components/Home";
 import Product from "./components/Product";
 import Navigation from "./components/Navbar";
+import Footer from "./components/Footer";
 function App() {
   return (
     <Routing>
@@ -16,6 +17,7 @@ function App() {
         <Route path="/shopping" component={Shopping} />
         <Route path="/product/:id" component={Product} />
       </Switch>
+      <Footer />
     </Routing>
   );
 }
